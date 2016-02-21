@@ -1,15 +1,15 @@
-module SpreeMultiCurrency
+module SolidusMultiCurrency
   module_function
 
-  # Returns the version of the currently loaded SpreeMultiCurrency as a
+  # Returns the version of the currently loaded SolidusMultiCurrency as a
   # <tt>Gem::Version</tt>.
   def version
     Gem::Version.new VERSION::STRING
   end
 
   module VERSION
-    MAJOR = 2
-    MINOR = 4
+    MAJOR = 1
+    MINOR = 1
     TINY  = 0
     PRE   = nil
 

@@ -1,4 +1,4 @@
-Copyright (c) 2007-2015, Gregor MacDougall, Spree Commerce, Inc. and other contributors
+Copyright (c) 2007-2016, James Whelton, Solidus and other contributors
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,

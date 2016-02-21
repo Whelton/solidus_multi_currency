@@ -2,19 +2,19 @@
 lib = File.expand_path('../lib/', __FILE__)
 $LOAD_PATH.unshift lib unless $LOAD_PATH.include?(lib)
 
-require 'spree_multi_currency/version'
+require 'solidus_multi_currency/version'
 
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'spree_multi_currency'
-  s.version     = SpreeMultiCurrency.version
-  s.summary     = 'Spree Commerce Extension - Provide currency customization'
+  s.name        = 'solidus_multi_currency'
+  s.version     = SolidusMultiCurrency.version
+  s.summary     = 'Multiple currencies in Solidus'
   s.description = s.summary
-  s.required_ruby_version = '>= 1.9.3'
+  s.required_ruby_version = '>= 2.0.0'
 
-  s.authors   = ['Gregor MacDougall', 'Spree Community']
-  s.email     = ['gmacdougall@freerunningtechnologies.com', 'gems@spreecommerce.com']
-  s.homepage  = 'https://github.com/spree-contrib/spree_multi_currency'
+  s.authors   = ['James Whelton', 'Spree Community']
+  s.email     = ['james@whelton.io']
+  s.homepage  = 'https://github.com/whelton/solidus_multi_currency'
   s.license   = 'BSD-3'
 
   s.files        = `git ls-files`.split("\n")
@@ -22,7 +22,8 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '~> 2.4.0'
+  s.add_dependency 'solidus_core', '~> 1.1'
+  s.add_dependency 'deface',        '~> 1.0.2'
 
   s.add_development_dependency 'capybara', '~> 2.4'
   s.add_development_dependency 'selenium-webdriver'

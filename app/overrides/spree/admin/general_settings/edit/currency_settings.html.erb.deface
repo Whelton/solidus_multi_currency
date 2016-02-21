@@ -1,34 +1,26 @@
 <!-- insert_after '[data-hook="admin_general_setting_mail_from_address"]' -->
-<div class="panel panel-default currencies">
-  <div class="panel-heading">
-    <h1 class="panel-title"><%= Spree.t(:currencies) %></h1>
-  </div>
 
-  <div class="panel-body">
-    <div class="form-group">
-      <label><%= Spree.t('supported_currencies.short') %></label>
-      <input type="text" class="form-control" value="<%= Spree::Config.supported_currencies %>" name="supported_currencies"/>
-      <p class="help-block"><%= Spree.t('supported_currencies.long') %></p>
-    </div>
+<div class="row">
+  <div class="alpha six columns">
+    <fieldset class="no-border-bottom">
 
-    <div class="form-group">
-      <div class="checkbox">
-        <label>
-          <%= check_box nil, :allow_currency_change, name: :allow_currency_change, checked: Spree::Config.allow_currency_change %>
-          <%= Spree.t('allow_currency_change.short') %>
-        </label>
-        <p class="help-block"><%= Spree.t('allow_currency_change.long') %></p>
+
+      <legend align="center"><%= Spree.t(:currencies) %></legend>
+
+      <div class="field" data-hook="admin_general_setting_multi_currency_supported_currencies">
+        <label for="multi_currency_supported_currencies">Supported Currencies (comma seperated)</label>
+        <br>
+        <input class="fullwidth" type="text" value="<%= Spree::Config.supported_currencies %>" name="supported_currencies" id="multi_currency_supported_currencies">
       </div>
-    </div>
 
-    <div class="form-group">
-      <div class="checkbox">
-        <label>
-          <%= check_box nil, :show_currency_selector, name: :show_currency_selector, checked: Spree::Config.show_currency_selector %>
-          <%= Spree.t('show_currency_selector.short') %>
-        </label>
-        <p class="help-block"><%= Spree.t('show_currency_selector.long_html') %></p>
+      <div class="field" data-hook="admin_general_setting_multi_currency_supported_currencies">
+        <label>Allow Currency Change <%= check_box nil, :allow_currency_change, name: :allow_currency_change, checked: Spree::Config.allow_currency_change %></label>
       </div>
-    </div>
+
+      <div class="field" data-hook="admin_general_setting_multi_currency_supported_currencies">
+        <label>Show Currency Selector <%= check_box nil, :show_currency_selector, name: :show_currency_selector, checked: Spree::Config.show_currency_selector %></label>
+      </div>
+
+    </fieldset>
   </div>
 </div>

@@ -1,6 +1,6 @@
 module SolidusMultiCurrency
   class Engine < Rails::Engine
-    require 'solidus/core'
+    require 'spree/core'
     isolate_namespace Spree
     engine_name 'solidus_multi_currency'
 
